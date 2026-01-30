@@ -10,14 +10,14 @@
   <meta name="description"
     content="Ladakh Ride — locally-owned cab rental & tour agency in Leh-Ladakh. 1200+ happy travelers, 10+ years of experience. Custom tours to Pangong, Nubra, Tso Moriri & more. 24/7 support." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.ladakhride.com/" />
+  <link rel="canonical" href="https://ladakh-ride.vercel.app/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Ladakh Ride | Cab Rental & Tour Agency" />
   <meta property="og:description"
     content="Local experts. Safe drivers. Custom itineraries. 24/7 support. Explore Pangong, Nubra, Tso Moriri & more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.ladakhride.com/" />
+  <meta property="og:url" content="https://ladakh-ride.vercel.app/" />
   <meta property="og:image"
     content="https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=1600&auto=format&fit=crop" />
 
@@ -34,7 +34,9 @@
   <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -46,335 +48,10 @@
 
 
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fafaf9;
-      /* Stone-50 */
-      color: #44403c;
-      /* Stone-700 */
-    }
-
-    /* Reduced motion accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    /* Ensure smoother mobile perf for fixed background */
-    @media (max-width: 768px) {
-      .hero-section {
-        background-attachment: scroll;
-      }
-    }
-
-    /* Enhanced Hero Section */
-    .hero-section {
-      background-image: linear-gradient(to bottom, rgba(30, 27, 75, 0.3), rgba(30, 27, 75, 0.7)), url('https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=2070&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-      opacity: 0.3;
-    }
-
-    .hero-overlay {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Rotating text */
-    .rotating-text {
-      position: absolute;
-      opacity: 0;
-      transform: translateY(30px) scale(0.9);
-      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      width: 100%;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) translateY(30px) scale(0.9);
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .rotating-text.active {
-      opacity: 1;
-      transform: translate(-50%, -50%) translateY(0) scale(1);
-    }
-
-    #rotating-subtitle {
-      position: relative;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 100%;
-      max-width: 100vw;
-    }
-
-    /* Cards & Glass */
-    .card-hover-effect {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .card-hover-effect:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      background: rgba(255, 255, 255, 1);
-    }
-
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    }
-
-    /* FAQ */
-    .faq-item .answer {
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    .faq-item.open .answer {
-      max-height: 300px;
-    }
-
-    .faq-item.open .icon-plus {
-      transform: rotate(45deg);
-    }
-
-    .icon-plus {
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Modal */
-    #booking-modal {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Float animation */
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    .float-animation {
-      animation: float 3s ease-in-out infinite;
-    }
-
-    /* Gradient Text -> Now Solid Amber for Bronze/Gold feel */
-    .gradient-text {
-      color: #b45309;
-      /* Amber-700 */
-      background: none;
-      -webkit-background-clip: border-box;
-      background-clip: border-box;
-      -webkit-text-fill-color: currentColor;
-    }
-
-    /* Buttons */
-    .btn-primary {
-      background: #b45309;
-      /* Amber-700 */
-      color: white;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      border: none;
-      outline: none;
-      box-shadow: 0 4px 6px -1px rgba(180, 83, 9, 0.3), 0 2px 4px -1px rgba(180, 83, 9, 0.1);
-    }
-
-    .btn-primary::before {
-      display: none;
-      /* Remove shine for matte realism */
-    }
-
-    .btn-primary:hover {
-      background: #92400e;
-      /* Amber-800 */
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(180, 83, 9, 0.4), 0 4px 6px -2px rgba(180, 83, 9, 0.1);
-    }
-
-    .btn-primary:active {
-      transform: translateY(-1px) scale(0.98);
-    }
-
-    /* Scroll Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Navigation underline */
-    .nav-link {
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #b45309;
-      transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    /* Stats */
-    .stats-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .stats-card:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Sticky mobile CTA */
-    .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      background: #b45309;
-      /* Amber-700 */
-      z-index: 40;
-    }
-
-    /* Testimonial slider */
-    .slider {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .slide {
-      min-width: 100%;
-    }
-
-    /* Price estimate pill */
-    .price-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #ffffff;
-      border-radius: 9999px;
-      padding: 8px 14px;
-      backdrop-filter: blur(4px);
-    }
-
-    /* Focus ring utility */
-    .focus-visible:focus {
-      outline: 3px solid #7c3aed;
-      outline-offset: 2px;
-    }
-
-    /* Shimmer */
-    .shimmer {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shimmer::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      transform: translateX(-100%);
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-      animation: shimmer 2s infinite;
-    }
-
-    @keyframes shimmer {
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-    /* Lightbox + badges */
-    #lightbox {
-      transition: opacity 0.3s ease;
-    }
-
-    .lightbox-show {
-      display: flex !important;
-      opacity: 1 !important;
-    }
-
-    .badge-open {
-      background: #dcfce7;
-      color: #16a34a;
-    }
-
-    .badge-closed {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .badge-caution {
-      background: #fef9c3;
-      color: #a16207;
-    }
-
-    /* Map container */
-
-
-    /* Itinerary tabs */
-    .itinerary-tab.active {
-      background: #b45309;
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-stone-50 text-stone-800">
+<body class="bg-stone-50 text-stone-800 bg-textured">
 
   <!-- Skip link -->
   <a href="#main-content"
@@ -439,7 +116,7 @@
       <div class="container mx-auto px-6 py-2 flex items-center justify-between">
         <div class="flex items-center">
           <span
-            class="inline-flex items-center bg-amber-100 text-amber-800 rounded-full px-3 py-1 mr-3 text-xs font-semibold">
+            class="inline-flex items-center bg-amber-100 text-amber-800 rounded-full px-3 py-1 mr-3 text-xs font-semibold sticker">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 0110 10 10 10 0 11-10-10z" />
             </svg>
@@ -463,26 +140,26 @@
     <section class="hero-section text-white">
       <div class="hero-overlay w-full h-full">
         <div
-          class="container mx-auto px-6 py-28 md:py-44 flex flex-col items-center justify-center text-center min-h-[90vh]">
+          class="container mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-24 flex flex-col items-center justify-center text-center min-h-[85vh]">
           <div class="fade-in max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-              <span class="gradient-text">Locals. Safe. Legendary Routes.</span><br>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 font-serif">
+              <span class="gradient-text">Born in the Himalayas.</span><br>
               <span class="text-white">Explore Ladakh with Ladakh Ride</span>
             </h1>
-            <p class="text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl text-blue-100/90 max-w-prose mx-auto leading-loose">
               Family-run tour agency with handpicked drivers and premium cabs. Curated itineraries to Pangong, Nubra,
               Tso Moriri & beyond.
             </p>
           </div>
 
-          <div id="rotating-subtitle" class="mt-10 text-lg md:text-2xl font-light mb-14 relative">
-            <p class="rotating-text active">Cab Rental & Custom Tour Planning</p>
-            <p class="rotating-text">Trusted by 1200+ Travelers</p>
+          <div id="rotating-subtitle" class="mt-8 text-lg md:text-2xl font-light mb-8 relative">
+            <p class="rotating-text active">Cab Rental & Custom Tours</p>
+            <p class="rotating-text">1,200+ Journeys, 0 Compromises</p>
             <p class="rotating-text">Premium Fleet: Innova, Crysta</p>
             <p class="rotating-text">24/7 Support with Local Experts</p>
           </div>
 
-          <div class="fade-in mt-4 flex flex-col items-center gap-4">
+          <div class="fade-in mt-2 flex flex-col items-center gap-4">
             <a href="#packages"
               class="btn-primary text-white px-10 py-5 rounded-2xl text-lg md:text-xl font-bold float-animation shadow-2xl focus-visible inline-flex items-center justify-center">
               <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -500,7 +177,7 @@
             </div>
           </div>
 
-          <div class="fade-in mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+          <div class="fade-in mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
             <div class="bg-white/10 rounded-lg px-4 py-3 flex items-center justify-center shimmer"><span>Verified Local
                 Drivers</span></div>
             <div class="bg-white/10 rounded-lg px-4 py-3 flex items-center justify-center shimmer"><span>Clean &
@@ -515,15 +192,15 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-32 bg-white">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Our Services</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comfort, reliability, and local expertise — a perfect mix
-            for high-altitude travel in Ladakh.</p>
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6 font-serif">Our Services</h2>
+          <p class="text-xl text-gray-600 max-w-prose mx-auto leading-loose">Comfort, reliability, and local expertise —
+            a perfect mix for high-altitude travel in Ladakh.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="fade-in p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
+          <div class="fade-in stagger-1 p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
             <div
               class="w-16 h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -538,7 +215,9 @@
               class="booking-btn mt-8 inline-block btn-primary text-white px-6 py-3 rounded-lg font-semibold">Get
               Quote</button>
           </div>
-          <div class="fade-in p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
+          <div
+            class="fade-in stagger-2 p-10 rounded-2xl shadow-2xl border border-amber-100 card-featured bg-white md:translate-y-6-organic relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-amber-600"></div>
             <div
               class="w-16 h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -546,13 +225,14 @@
                   d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13 6-3m-6 3V7m6 10 4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7" />
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Custom Tours</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Custom Tours</h3>
             <p class="mt-4 text-gray-600 leading-relaxed">Flexible itineraries to Pangong, Nubra, Turtuk, Hanle & Tso
               Moriri with altitude-conscious planning.</p>
-            <a href="#packages" class="mt-8 inline-block btn-primary text-white px-6 py-3 rounded-lg font-semibold">View
+            <a href="#packages"
+              class="mt-8 inline-block btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">View
               Packages</a>
           </div>
-          <div class="fade-in p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
+          <div class="fade-in stagger-3 p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
             <div
               class="w-16 h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -572,72 +252,78 @@
     </section>
 
     <!-- Top Destinations -->
-    <section id="destinations" class="py-20 bg-white">
+    <section id="destinations" class="py-32 bg-stone-50">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Top Destinations</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">Breathtaking landscapes and ancient culture — discover
-            Ladakh’s most iconic locations.</p>
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6 font-serif">Top Destinations</h2>
+          <p class="text-xl text-gray-600 max-w-prose mx-auto leading-loose">Breathtaking landscapes and ancient culture
+            — discover Ladakh’s most iconic locations.</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="thiksey.jpg" loading="lazy" alt="Thiksey Monastery in Ladakh under blue skies"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Monasteries</h3>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pangong -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="pangong.jpg" loading="lazy" alt="Pangong Lake"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Pangong Lake</h3>
+              <p class="text-gray-200 mt-2">The world's highest saltwater lake. Changing colors from blue to turquoise.
+              </p>
             </div>
           </div>
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="pangong.jpg" loading="lazy" alt="Pangong Lake with turquoise waters and rugged mountains"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Pangong Lake</h3>
-              </div>
+
+          <!-- Nubra -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="nubra.jpg" loading="lazy" alt="Nubra"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Nubra Valley</h3>
+              <p class="text-gray-200 mt-2">Home to double-humped camels and white sand dunes.</p>
             </div>
           </div>
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="nubra.jpg" loading="lazy" alt="Sand dunes and double-humped camels in Nubra Valley"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Nubra Valley</h3>
-              </div>
+
+          <!-- Monasteries -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="thiksey.jpg" loading="lazy" alt="Thiksey"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Monasteries</h3>
+              <p class="text-gray-200 mt-2">Ancient gompas perched on hilltops.</p>
             </div>
           </div>
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="sham.jpg" loading="lazy" alt="Rolling landscapes and traditional villages in Sham Valley"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Sham Valley</h3>
-              </div>
+
+          <!-- Tso Moriri -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="tso.jpg" loading="lazy" alt="Tso Moriri"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Tso Moriri</h3>
+              <p class="text-gray-200 mt-2">Pristine & Remote high-altitude lake.</p>
             </div>
           </div>
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="tso.jpg" loading="lazy" alt="Tso Moriri Lake with deep blue waters and a dramatic skyline"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Tso Moriri</h3>
-              </div>
+
+          <!-- Sham -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="sham.jpg" loading="lazy" alt="Sham"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Sham Valley</h3>
+              <p class="text-gray-200 mt-2">Lower altitude, apricot blossoms & ancient temples.</p>
             </div>
           </div>
-          <div class="fade-in group">
-            <div class="relative overflow-hidden rounded-2xl shadow-xl card-hover-effect">
-              <img src="khardung.jpg" loading="lazy" alt="Khardungla Pass with prayer flags over the high mountain road"
-                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3 class="text-white font-bold text-lg">Khardungla Pass</h3>
-              </div>
+
+          <!-- Khardungla -->
+          <div class="fade-in group relative overflow-hidden rounded-2xl shadow-xl card-hover-effect h-80">
+            <img src="khardung.jpg" loading="lazy" alt="Khardungla"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl font-serif">Khardung La</h3>
+              <p class="text-gray-200 mt-2">One of the highest motorable roads in the world.</p>
             </div>
           </div>
         </div>
@@ -648,7 +334,7 @@
     <section id="status" class="py-16 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Travel Status</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4 font-serif">Travel Status</h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">Check weather, road status, and high-altitude tips before
             you go.</p>
         </div>
@@ -710,7 +396,7 @@
     <section id="itinerary" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-10 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3">Day-by-Day Itinerary</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3 font-serif">Day-by-Day Itinerary</h2>
           <p class="text-gray-600">Switch packages to see the day plan. You can copy or add it to your booking.</p>
         </div>
 
@@ -875,40 +561,61 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section class="py-20 bg-stone-900 text-white relative overflow-hidden">
       <div class="absolute inset-0 bg-stone-900 opacity-20"></div>
       <div class="container mx-auto px-6 relative z-10">
-        <div class="text-center mb-12 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Choose Ladakh Ride?</h2>
-          <p class="text-xl text-stone-300">Local knowledge. Reliable fleet. Unmatched service.</p>
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">1,200+ Journeys. 0 Compromises.</h2>
+          <p class="text-xl text-stone-300 max-w-2xl mx-auto">We don't just drive; we guide. Deep local knowledge, a
+            reliable fleet, and service that feels like family.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="fade-in stats-card p-8 rounded-2xl">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- Stat 1 -->
+          <div
+            class="fade-in stagger-1 stats-visual p-10 rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500">
+            <div
+              class="absolute inset-0 bg-white/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <p class="text-5xl font-bold mb-2 counter" data-target="1200">0</p>
-            <p class="text-lg text-stone-300">Happy Customers</p>
+            <div class="text-5xl font-bold mb-2 counter font-serif text-amber-500" data-target="1200">0</div>
+            <p class="text-lg text-stone-300 font-medium tracking-wide uppercase text-sm">Happy Customers</p>
           </div>
-          <div class="fade-in stats-card p-8 rounded-2xl">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          <!-- Stat 2 -->
+          <div
+            class="fade-in stagger-2 stats-visual p-10 rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500 md:-translate-y-6">
+            <div
+              class="absolute inset-0 bg-white/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <p class="text-5xl font-bold mb-2 counter" data-target="10">0</p>
-            <p class="text-lg text-stone-300">Years of Experience</p>
+            <div class="text-5xl font-bold mb-2 counter font-serif text-amber-500" data-target="10">0</div>
+            <p class="text-lg text-stone-300 font-medium tracking-wide uppercase text-sm">Years of Experience</p>
           </div>
-          <div class="fade-in stats-card p-8 rounded-2xl">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          <!-- Stat 3 -->
+          <div
+            class="fade-in stagger-3 stats-visual p-10 rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500">
+            <div
+              class="absolute inset-0 bg-white/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <p class="text-5xl font-bold mb-2">100%</p>
-            <p class="text-lg text-stone-300">Satisfaction Rate</p>
+            <div class="text-5xl font-bold mb-2 font-serif text-amber-500">100%</div>
+            <p class="text-lg text-stone-300 font-medium tracking-wide uppercase text-sm">Satisfaction Rate</p>
           </div>
         </div>
       </div>
@@ -918,7 +625,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section id="packages" class="py-20 bg-stone-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Our Tour Packages</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4 font-serif">Our Tour Packages</h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">Altitude-aware planning, scenic routes, and flexible stays.
             Customize anything — add Turtuk, Hanle, or rafting on request.</p>
         </div>
@@ -966,11 +673,13 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
             class="fade-in rounded-2xl shadow-2xl p-8 flex flex-col card-hover-effect bg-white relative overflow-hidden transform scale-105">
             <div class="absolute top-0 left-0 w-full h-1 bg-amber-600"></div>
             <span
-              class="absolute top-4 right-4 bg-amber-600 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">MOST
+              class="absolute top-4 right-4 bg-amber-600 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg sticker">MOST
               POPULAR</span>
             <div class="text-center mb-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-2">Gold Package</h3>
-              <p class="text-green-600 font-bold text-sm mb-2 uppercase tracking-wide">Group Booking Package</p>
+              <p
+                class="text-green-600 font-bold text-sm mb-2 uppercase tracking-wide sticker bg-green-100 px-2 py-1 rounded">
+                Group Booking Package</p>
               <div class="text-5xl font-bold gradient-text mb-2">₹35,000 <span
                   class="text-lg text-gray-500 font-medium">/ person</span></div>
               <p class="text-gray-500 font-medium">4 Nights 5 Days</p>
@@ -1012,7 +721,9 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
             <div class="absolute top-0 left-0 w-full h-1 bg-amber-800"></div>
             <div class="text-center mb-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-2">Diamond Package</h3>
-              <p class="text-green-600 font-bold text-sm mb-2 uppercase tracking-wide">Group Booking Package</p>
+              <p
+                class="text-green-600 font-bold text-sm mb-2 uppercase tracking-wide sticker bg-green-100 px-2 py-1 rounded">
+                Group Booking Package</p>
               <div class="text-5xl font-bold gradient-text mb-2">₹38,000 <span
                   class="text-lg text-gray-500 font-medium">/ person</span></div>
               <p class="text-gray-500 font-medium">5 Nights 6 Days</p>
@@ -1059,7 +770,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section id="fleet" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Our Fleet</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4 font-serif">Our Fleet</h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">Handpicked, terrain-ready vehicles with daily safety
             checks.</p>
         </div>
@@ -1072,7 +783,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
               <p class="text-gray-600 mSt-2">Best for families • Comfortable seats • AC/Heater • Luggage space</p>
             </div>
           </div>
-          <div class="fade-in card-hover-effect rounded-2xl overflow-hidden shadow-xl">
+          <div class="fade-in card-hover-effect rounded-2xl overflow-hidden shadow-xl md:translate-y-6-organic">
             <img src="crysta.jpeg" loading="lazy" alt="Toyota Crysta with passengers" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="font-bold text-xl">Toyota Crysta</h3>
@@ -1095,7 +806,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section id="gallery" class="py-20 bg-stone-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Gallery</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4 font-serif">Gallery</h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">Moments from Pangong, Nubra, Tso Moriri, monasteries, and
             more.</p>
         </div>
@@ -1133,7 +844,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section class="py-20 bg-stone-100">
       <div class="container mx-auto px-6">
         <div class="text-center mb-10 fade-in">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3">What Travelers Say</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3 font-serif">What Travelers Say</h2>
           <p class="text-gray-600">Real stories from journeys across Ladakh.</p>
         </div>
         <div class="slider fade-in rounded-2xl shadow-xl bg-white">
@@ -1179,7 +890,7 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
     <section id="offers" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3">Seasonal Offers</h2>
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-3 font-serif">Seasonal Offers</h2>
           <p class="text-gray-600">Use a promo code in the booking form. Discounts reflect instantly in your estimate.
           </p>
         </div>
@@ -1274,6 +985,13 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
           <a href="#contact"
             class="mt-6 inline-block bg-gray-800 text-white px-5 py-2 rounded-md hover:bg-gray-900 transition">Read
             More</a>
+          <div class="mt-8 p-6 bg-amber-50 rounded-xl border border-amber-100 sticker transform rotate-1">
+            <p class="font-handwriting text-2xl text-amber-900 leading-relaxed">
+              "We don't just drive you; we welcome you into our home. Ladakh is not a destination, it's a feeling. Let
+              us show you the real Himalayas."
+            </p>
+            <p class="mt-4 font-bold text-amber-800 text-right font-serif">— Tenzin & Family</p>
+          </div>
         </div>
         <div aria-labelledby="faq-heading">
           <h2 id="faq-heading" class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
@@ -1561,13 +1279,17 @@ Day 6: Monasteries / Buffer day (Departure)</pre>
         </form>
       </div>
       <div id="success-message" class="hidden text-center py-8">
-        <h2 class="text-2xl font-bold text-green-500 mb-4">Thank You!</h2>
-        <p class="text-gray-700 mb-6">Your request has been sent. Our team will respond shortly.</p>
+        <h2 class="text-3xl font-bold text-amber-700 mb-4 font-serif">Your Journey Begins Here!</h2>
+        <p class="text-gray-600 mb-6 italic">"Thank you for choosing us. We’ve received your inquiry and will call you
+          shortly to plan your perfect Ladakh trip."</p>
+        <p class="text-sm font-bold text-gray-800 mb-6">— Tenzin & Team</p>
         <a id="whatsapp-confirm-btn" href="#" target="_blank"
-          class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 mb-2">Confirm on
-          WhatsApp</a>
-        <button id="close-success-btn"
-          class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Close</button>
+          class="inline-block bg-green-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 mb-4 transition transform hover:scale-105">
+          Chat on WhatsApp (Faster)
+        </a>
+        <br>
+        <button id="close-success-btn" class="mt-2 text-gray-500 hover:text-gray-800 underline text-sm">Return to
+          Home</button>
       </div>
     </div>
   </div>
@@ -1849,20 +1571,25 @@ Please confirm my booking and provide further details. Thank you!`;
     }
 
     // Active nav highlight
+    // Active nav highlight (Optimized)
     function initActiveNav() {
-      const sections = [...document.querySelectorAll('section[id]')];
-      const navLinks = [...document.querySelectorAll('a.nav-link')];
-      window.addEventListener('scroll', () => {
-        let current = sections[0]?.id;
-        for (const s of sections) {
-          const top = s.getBoundingClientRect().top;
-          if (top <= 100) current = s.id;
-        }
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href') || '';
-          const id = href.replace('#', '');
-          link.classList.toggle('text-blue-200', id === current);
+      const navLinks = document.querySelectorAll('a.nav-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              const href = link.getAttribute('href') || '';
+              const linkId = href.replace('#', '');
+              link.classList.toggle('text-blue-200', linkId === id);
+              // Also toggle 'text-stone-600' vs 'text-white' if needed, or just rely on base styles
+            });
+          }
         });
+      }, { threshold: 0.5 }); // Trigger when 50% visible
+
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
       });
     }
 
@@ -1982,7 +1709,7 @@ Please confirm my booking and provide further details. Thank you!`;
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "name": "Ladakh Ride",
-    "url": "https://www.ladakhride.com/",
+    "url": "https://ladakh-ride.vercel.app/",
     "logo": "https://www.ladakhride.com/logo.png",
     "image": "https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=1600&auto=format&fit=crop",
     "telephone": "+91-9797796784",
