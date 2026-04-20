@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ladakh Ride | Cab Rental & Tour Agency</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Ladakh Ride — locally-owned cab rental & tour agency in Leh-Ladakh. 1200+ happy travelers, 10+ years of experience. Custom tours to Pangong, Nubra, Tso Moriri & more. 24/7 support." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ladakh-ride.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ladakh Ride | Cab Rental & Tour Agency" />
+  <meta property="og:description"
+    content="Local experts. Safe drivers. Custom itineraries. 24/7 support. Explore Pangong, Nubra, Tso Moriri & more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ladakh-ride.vercel.app/" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=1600&auto=format&fit=crop" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ladakh Ride | Cab Rental & Tour Agency" />
+  <meta name="twitter:description" content="Local experts. Safe drivers. Custom itineraries. 24/7 support." />
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=1600&auto=format&fit=crop" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#667eea" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-stone-50 text-stone-800 bg-textured">
+
+  <!-- Skip link -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 bg-white text-black px-4 py-2 rounded shadow">Skip
+    to content</a>
+
+  <!-- Header & Navigation -->
+  <header class="glass-effect sticky top-0 z-40">
+    <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-stone-900 tracking-tight" aria-label="Ladakh Ride Home">Ladakh
+        Ride</a>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#services" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Services</a>
+        <a href="#destinations"
+          class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Destinations</a>
+        <a href="#status" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Status</a>
+        <a href="#itinerary" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Itinerary</a>
+
+        <a href="#packages" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Packages</a>
+        <a href="#fleet" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Fleet</a>
+        <a href="#gallery" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Gallery</a>
+        <a href="#offers" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">Offers</a>
+        <a href="#about" class="nav-link text-stone-600 hover:text-amber-700 font-medium text-sm">About</a>
+        <button data-package="Contact Us"
+          class="booking-btn btn-primary text-white px-4 py-2 rounded-lg font-medium text-sm focus-visible">Contact
+          Us</button>
+        <a href="tel:+919797796784"
+          class="ml-2 inline-flex items-center text-stone-700 hover:text-amber-700 font-medium text-sm">
+          <svg width="18" height="18" class="mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2.07 2.07 0 0 1-2.27 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.16 9.9 19.79 19.79 0 0 1 .09 1.27 2.07 2.07 0 0 1 2.07 0h3a2.07 2.07 0 0 1 2.07 1.72c.13.98.34 1.94.62 2.87a2.07 2.07 0 0 1-.47 2.17l-1.3 1.3a16 16 0 0 0 6.88 6.88l1.3-1.3a2.07 2.07 0 0 1 2.17-.47 13.4 13.4 0 0 0 2.87.62A2.07 2.07 0 0 1 22 16.92z" />
+          </svg>
+          Call 24/7
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-stone-800 focus-visible" aria-label="Open menu"
+        aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <button id="mobile-menu-close" class="md:hidden absolute top-4 right-4 text-white text-2xl hidden" aria-label="Close menu">&times;</button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-16 pb-4 glass-effect relative">
+      <a href="#services" class="block py-3 text-white hover:text-blue-200 font-medium">Services</a>
+      <a href="#destinations" class="block py-3 text-white hover:text-blue-200 font-medium">Destinations</a>
+      <a href="#status" class="block py-3 text-white hover:text-blue-200 font-medium">Status</a>
+      <a href="#itinerary" class="block py-3 text-white hover:text-blue-200 font-medium">Itinerary</a>
+
+      <a href="#packages" class="block py-3 text-white hover:text-blue-200 font-medium">Packages</a>
+      <a href="#fleet" class="block py-3 text-white hover:text-blue-200 font-medium">Fleet</a>
+      <a href="#gallery" class="block py-3 text-white hover:text-blue-200 font-medium">Gallery</a>
+      <a href="#offers" class="block py-3 text-white hover:text-blue-200 font-medium">Offers</a>
+      <a href="#about" class="block py-3 text-white hover:text-blue-200 font-medium">About</a>
+      <button data-package="Contact Us"
+        class="booking-btn block mt-4 w-full text-center btn-primary text-white px-6 py-3 rounded-lg font-semibold">Contact
+        Us</button>
+      <a href="tel:+919797796784" class="mt-3 block text-white font-semibold">Call 24/7: +91 97977 96784</a>
+    </div>
+
+    <!-- Advisory bar -->
+    <div class="bg-stone-100 text-stone-800 border-b border-stone-200 text-xs md:text-sm">
+      <div class="container mx-auto px-3 md:px-6 py-1.5 md:py-2 flex items-center justify-between">
+        <div class="flex items-center">
+          <span
+            class="inline-flex items-center bg-amber-100 text-amber-800 rounded-full px-2 md:px-3 py-0.5 md:py-1 mr-2 md:mr-3 text-xs font-semibold">
+            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 0110 10 10 10 0 11-10-10z" />
+            </svg>
+            <span class="hidden sm:inline">Advisory</span>
+          </span>
+          <span id="advisory-text" class="flex items-center text-xs">
+            <span class="relative flex h-2 w-2 md:h-3 md:w-3 mr-1 md:mr-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-red-500"></span>
+            </span>
+            <span class="hidden md:inline">Roads open • Permits required for Pangong & Nubra</span>
+            <span class="md:hidden">Roads open</span>
+          </span>
+        </div>
+        <span class="hidden md:inline text-stone-500 text-xs" id="advisory-updated"></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+      <div class="hero-overlay w-full h-full">
+        <!-- Tibetan Prayer Flag Decorations -->
+        <div class="absolute top-4 left-4 md:top-8 md:left-8 tibetan-flag flex-col">
+          <span class="flag-blue"></span>
+          <span class="flag-white"></span>
+          <span class="flag-red"></span>
+          <span class="flag-yellow"></span>
+          <span class="flag-green"></span>
+        </div>
+        <div class="absolute top-4 right-4 md:top-8 md:right-8 tibetan-flag flex-col">
+          <span class="flag-blue"></span>
+          <span class="flag-white"></span>
+          <span class="flag-red"></span>
+          <span class="flag-yellow"></span>
+          <span class="flag-green"></span>
+        </div>
+        <div
+          class="container mx-auto px-4 pt-20 pb-12 md:pt-32 md:pb-24 flex flex-col items-center justify-center text-center min-h-[80vh]">
+          <div class="fade-in max-w-4xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-extrabold leading-tight mb-3 font-serif">
+              <span class="gradient-text">Born in the Himalayas.</span><br>
+              <span class="text-white">Explore Ladakh</span>
+            </h1>
+            <p class="text-base md:text-xl text-blue-100/90 max-w-prose mx-auto leading-relaxed">
+              Family-run tour agency with handpicked drivers and premium cabs.
+            </p>
+          </div>
+
+          <div id="rotating-subtitle" class="mt-6 text-sm md:text-2xl font-light mb-6 relative">
+            <p class="rotating-text active">Cab Rental & Custom Tours</p>
+            <p class="rotating-text">1,200+ Journeys, 0 Compromises</p>
+            <p class="rotating-text">Premium Fleet: Innova, Crysta</p>
+            <p class="rotating-text">24/7 Support with Local Experts</p>
+          </div>
+
+          <div class="fade-in mt-2 flex flex-col items-center gap-3">
+            <a href="#packages"
+              class="btn-primary text-white px-8 py-4 rounded-xl text-base md:text-xl font-bold shadow-2xl focus-visible inline-flex items-center justify-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                </path>
+              </svg>
+              Plan My Trip
+            </a>
+            <div class="price-pill text-xs">
+              <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM11 7h2v2h-2zM12 19a1 1 0 0 1-1-1v-6h2v6a1 1 0 0 1-1 1z" />
+              </svg>
+              Best Price Guarantee
+            </div>
+          </div>
+
+          <div class="fade-in mt-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 w-full max-w-3xl">
+            <div class="bg-white/10 rounded-lg px-2 py-2 flex items-center justify-center text-xs"><span>Verified Drivers</span></div>
+            <div class="bg-white/10 rounded-lg px-2 py-2 flex items-center justify-center text-xs"><span>Clean Cabs</span></div>
+            <div class="bg-white/10 rounded-lg px-2 py-2 flex items-center justify-center text-xs"><span>Airport Pickup</span></div>
+            <div class="bg-white/10 rounded-lg px-2 py-2 flex items-center justify-center text-xs"><span>24/7 Support</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 md:py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10 md:mb-20 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-4 font-serif flex items-center justify-center gap-3">
+            <span class="tibetan-flag">
+              <span class="flag-blue"></span>
+              <span class="flag-white"></span>
+              <span class="flag-red"></span>
+              <span class="flag-yellow"></span>
+              <span class="flag-green"></span>
+            </span>
+            Our Services
+          </h2>
+          <p class="text-base md:text-xl text-gray-600 max-w-prose mx-auto">Comfort, reliability, and local expertise.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
+          <div class="fade-in p-6 md:p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
+            <div
+              class="w-12 h-12 md:w-16 md:h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-2">Cab Rental</h3>
+            <p class="text-sm md:text-base text-gray-600">Innova, Crysta, Scorpio & more.</p>
+            <button data-package="Cab Rental Inquiry"
+              class="booking-btn mt-4 md:mt-8 inline-block btn-primary text-white px-5 py-2 rounded-lg font-semibold text-sm">Get Quote</button>
+          </div>
+          <div
+            class="fade-in p-6 md:p-10 rounded-2xl shadow-2xl border border-amber-100 card-featured bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-amber-600"></div>
+            <div
+              class="w-12 h-12 md:w-16 md:h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13 6-3m-6 3V7m6 10 4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-2 font-serif">Custom Tours</h3>
+            <p class="text-sm md:text-base text-gray-600">Pangong, Nubra, Turtuk & more.</p>
+            <a href="#packages"
+              class="mt-4 md:mt-8 inline-block btn-primary text-white px-6 py-3 rounded-xl font-bold text-sm md:text-lg shadow-lg">View Packages</a>
+          </div>
+          <div class="fade-in p-6 md:p-10 rounded-2xl shadow-lg border border-stone-100 card-hover-effect bg-white">
+            <div
+              class="w-12 h-12 md:w-16 md:h-16 bg-amber-50 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-2">24/7 Support</h3>
+            <p class="text-sm md:text-base text-gray-600">Real-time help & permits.</p>
+            <button data-package="24/7 Support Inquiry"
+              class="booking-btn mt-4 md:mt-8 inline-block btn-primary text-white px-5 py-2 rounded-lg font-semibold text-sm">Contact Support</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Destinations -->
+<section id="destinations" class="py-16 md:py-32 bg-stone-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10 md:mb-20 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-4 font-serif">Top Destinations</h2>
+          <p class="text-base md:text-xl text-gray-600 max-w-prose mx-auto">Breathtaking landscapes and ancient culture.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          <!-- Pangong -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="pangong.jpg" loading="lazy" alt="Pangong Lake"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Pangong Lake</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">The world's highest saltwater lake.</p>
+            </div>
+          </div>
+
+          <!-- Nubra -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="nubra.jpg" loading="lazy" alt="Nubra"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Nubra Valley</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">Home to double-humped camels.</p>
+            </div>
+          </div>
+
+          <!-- Monasteries -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="thiksey.jpg" loading="lazy" alt="Thiksey"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Monasteries</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">Ancient gompas on hilltops.</p>
+            </div>
+          </div>
+
+          <!-- Tso Moriri -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="tso.jpg" loading="lazy" alt="Tso Moriri"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Tso Moriri</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">Pristine high-altitude lake.</p>
+            </div>
+          </div>
+
+          <!-- Sham -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="sham.jpg" loading="lazy" alt="Sham"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Sham Valley</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">Lower altitude & ancient temples.</p>
+            </div>
+          </div>
+
+          <!-- Khardungla -->
+          <div class="fade-in group relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl card-hover-effect h-56 md:h-80">
+            <img src="khardung.jpg" loading="lazy" alt="Khardungla"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+              <h3 class="text-white font-bold text-lg md:text-2xl font-serif">Khardung La</h3>
+              <p class="text-gray-200 mt-1 text-sm hidden md:block">Highest motorable road.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Status (Weather + Road + Tips) -->
+    <section id="status" class="py-12 md:py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8 md:mb-12 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-4 font-serif">Travel Status</h2>
+          <p class="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">Check weather & road status before you go.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <!-- Weather -->
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <div class="flex items-center justify-between mb-3 md:mb-4">
+              <h3 class="text-base md:text-xl font-bold">Leh Weather</h3>
+              <span id="wx-updated" class="text-xs text-gray-500">—</span>
+            </div>
+            <div class="flex items-center gap-3 md:gap-6">
+              <div class="text-3xl md:text-5xl font-extrabold gradient-text" id="wx-temp">—°C</div>
+              <div class="text-gray-600 text-sm">
+                <div id="wx-highlow">H: —° • L: —°</div>
+                <div id="wx-wind">Wind: — km/h</div>
+                <div class="text-xs text-gray-500">Open-Meteo</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Road status -->
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <h3 class="text-base md:text-xl font-bold mb-3 md:mb-4">Road Status</h3>
+            <ul class="space-y-2 md:space-y-3 text-sm text-gray-700">
+              <li class="flex items-center justify-between">
+                <span>Pangong</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-green-100 text-green-700" id="rs-pangong">Open</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Nubra</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-green-100 text-green-700" id="rs-nubra">Open</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Tso Moriri</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-yellow-100 text-yellow-700"
+                  id="rs-tsomoriri">Caution</span>
+              </li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2 md:mt-3">Status can change. We confirm 24 hrs prior.</p>
+          </div>
+
+          <!-- Altitude Tips -->
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <h3 class="text-base md:text-xl font-bold mb-3 md:mb-4">High-altitude Tips</h3>
+            <ul class="list-disc list-inside text-xs md:text-sm text-gray-700 space-y-1 md:space-y-2">
+              <li>Buffer Day 1 in Leh for acclimatization</li>
+              <li>Hydrate well, avoid alcohol on Day 1</li>
+              <li>Carry warm layers, SPF 50+</li>
+              <li>Oxygen available on request</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Itinerary timeline -->
+<section id="itinerary" class="py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-6 md:mb-10 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-3 font-serif">Day-by-Day Itinerary</h2>
+          <p class="text-sm md:text-base text-gray-600">Switch packages to see the day plan.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-4 md:mb-8">
+          <button class="itinerary-tab px-3 md:px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold text-sm active"
+            data-target="silver">Silver (3N/4D)</button>
+          <button class="itinerary-tab px-3 md:px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold text-sm"
+            data-target="gold">Gold (4N/5D)</button>
+          <button class="itinerary-tab px-3 md:px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold text-sm"
+            data-target="diamond">Diamond (5N/6D)</button>
+        </div>
+
+        <!-- Panels -->
+        <div class="space-y-6 md:space-y-10">
+          <!-- Silver -->
+          <div id="itinerary-silver" class="itinerary-panel">
+            <ol class="relative border-l border-gray-200">
+              <li class="mb-6 md:mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-stone-200 rounded-full ring-4 ring-white text-xs">1</span>
+                <h3 class="font-bold text-sm md:text-lg">Arrive Leh • Acclimatize</h3>
+                <p class="text-xs md:text-gray-600 text-gray-500">Airport pickup, rest, evening Shanti Stupa.</p>
+              </li>
+              <li class="mb-6 md:mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-stone-200 rounded-full ring-4 ring-white text-xs">2</span>
+                <h3 class="font-bold text-sm md:text-lg">Sham Valley to Alchi</h3>
+                <p class="text-xs md:text-gray-600 text-gray-500">Magnetic Hill, Sangam, Alchi.</p>
+              </li>
+              <li class="mb-6 md:mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-stone-200 rounded-full ring-4 ring-white text-xs">3</span>
+                <h3 class="font-bold text-sm md:text-lg">Leh → Pangong Lake</h3>
+                <p class="text-xs md:text-gray-600 text-gray-500">Via Chang La. Overnight at lake.</p>
+              </li>
+              <li class="ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-stone-200 rounded-full ring-4 ring-white text-xs">4</span>
+                <h3 class="font-bold text-sm md:text-lg">Pangong → Leh • Departure</h3>
+                <p class="text-xs md:text-gray-600 text-gray-500">Return via Chang La.</p>
+              </li>
+            </ol>
+            <div class="flex flex-wrap gap-2 md:gap-3">
+              <button class="booking-btn btn-primary text-white px-4 py-2 rounded-lg text-sm" data-package="Silver Package">Book Now</button>
+              <button class="copy-itinerary px-4 py-2 bg-gray-800 text-white rounded-lg text-sm" data-panel="silver">Copy</button>
+            </div>
+          </div>
+
+        <!-- Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+          <button class="itinerary-tab px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold active"
+            data-target="silver">Silver (3N/4D)</button>
+          <button class="itinerary-tab px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold"
+            data-target="gold">Gold (4N/5D)</button>
+          <button class="itinerary-tab px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-semibold"
+            data-target="diamond">Diamond (5N/6D)</button>
+        </div>
+
+        <!-- Panels -->
+        <div class="space-y-10">
+          <!-- Silver -->
+          <div id="itinerary-silver" class="itinerary-panel">
+            <ol class="relative border-l border-gray-200">
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-stone-200 rounded-full ring-8 ring-white">1</span>
+                <h3 class="font-bold text-lg">Arrive Leh • Acclimatize • Evening Local</h3>
+                <p class="text-gray-600">Airport pickup, hotel check-in, rest. Evening visit Shanti Stupa, Leh Market.
+                </p>
+              </li>
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-stone-200 rounded-full ring-8 ring-white">2</span>
+                <h3 class="font-bold text-lg">Sham Valley up to Alchi</h3>
+                <p class="text-gray-600">Magnetic Hill, Indus–Zanskar Sangam, Gurudwara Pathar Sahib, Alchi Monastery.
+                  Return to Leh.</p>
+              </li>
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-stone-200 rounded-full ring-8 ring-white">3</span>
+                <h3 class="font-bold text-lg">Leh → Pangong Lake (Overnight)</h3>
+                <p class="text-gray-600">Via Chang La. Check-in at lakeside camp/hotel. Sunset by the lake.</p>
+              </li>
+              <li class="ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-stone-200 rounded-full ring-8 ring-white">4</span>
+                <h3 class="font-bold text-lg">Pangong → Leh • Departure</h3>
+                <p class="text-gray-600">Return via Chang La. Airport drop or hotel.</p>
+              </li>
+            </ol>
+            <div class="flex flex-wrap gap-3">
+              <button class="booking-btn btn-primary text-white px-5 py-2 rounded-lg" data-package="Silver Package">Add
+                to Booking</button>
+              <button class="copy-itinerary px-5 py-2 bg-gray-800 text-white rounded-lg" data-panel="silver">Copy
+                Itinerary</button>
+            </div>
+            <pre id="itinerary-silver-text" class="hidden">Silver Itinerary (3N/4D)
+Day 1: Arrive Leh, acclimatize, evening Shanti Stupa & Market
+Day 2: Sham Valley up to Alchi (Magnetic Hill, Sangam, Pathar Sahib, Alchi)
+Day 3: Leh → Pangong via Chang La (Overnight Pangong)
+Day 4: Pangong → Leh (Airport/Hotel)</pre>
+          </div>
+
+          <!-- Gold -->
+          <div id="itinerary-gold" class="itinerary-panel hidden">
+            <ol class="relative border-l border-gray-200">
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-8 ring-white">1</span>
+                <h3 class="font-bold text-lg">Arrive Leh • Acclimatize • Local</h3>
+                <p class="text-gray-600">Airport pickup, rest, evening Leh Palace/Market.</p>
+              </li>
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-8 ring-white">2</span>
+                <h3 class="font-bold text-lg">Sham Valley up to Alchi</h3>
+                <p class="text-gray-600">Magnetic Hill, Sangam, Pathar Sahib, Alchi Monastery.</p>
+              </li>
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-8 ring-white">3</span>
+                <h3 class="font-bold text-lg">Leh → Nubra via Khardung La</h3>
+                <p class="text-gray-600">Hunder dunes, Bactrian camels, Diskit Monastery. Overnight Nubra.</p>
+              </li>
+              <li class="mb-10 ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-8 ring-white">4</span>
+                <h3 class="font-bold text-lg">Nubra → Pangong via Shyok</h3>
+                <p class="text-gray-600">Scenic route along Shyok. Overnight Pangong.</p>
+              </li>
+              <li class="ml-6">
+                <span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-8 ring-white">5</span>
+                <h3 class="font-bold text-lg">Pangong → Leh via Chang La • Departure</h3>
+                <p class="text-gray-600">Return to Leh. Airport/hotel drop.</p>
+              </li>
+            </ol>
+            <div class="flex flex-wrap gap-3">
+              <button class="booking-btn btn-primary text-white px-5 py-2 rounded-lg" data-package="Gold Package">Add to
+                Booking</button>
+              <button class="copy-itinerary px-5 py-2 bg-gray-800 text-white rounded-lg" data-panel="gold">Copy
+                Itinerary</button>
+            </div>
+            <pre id="itinerary-gold-text" class="hidden">Gold Itinerary (4N/5D)
+Day 1: Arrive Leh, acclimatize, local evening
+Day 2: Sham Valley up to Alchi
+Day 3: Leh → Nubra via Khardung La (Overnight Nubra)
+Day 4: Nubra → Pangong via Shyok (Overnight Pangong)
+Day 5: Pangong → Leh via Chang La (Departure)</pre>
+          </div>
+
+          <!-- Diamond -->
+          <div id="itinerary-diamond" class="itinerary-panel hidden">
+            <ol class="relative border-l border-gray-200">
+              <li class="mb-10 ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">1</span>
+                <h3 class="font-bold text-lg">Arrive Leh • Acclimatize • Local</h3>
+                <p class="text-gray-600">Rest + evening sights.</p>
+              </li>
+              <li class="mb-10 ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">2</span>
+                <h3 class="font-bold text-lg">Sham Valley up to Alchi</h3>
+                <p class="text-gray-600">Magnetic Hill, Sangam, Pathar Sahib, Alchi.</p>
+              </li>
+              <li class="mb-10 ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">3</span>
+                <h3 class="font-bold text-lg">Leh → Nubra via Khardung La</h3>
+                <p class="text-gray-600">Hunder dunes, Diskit. Overnight Nubra.</p>
+              </li>
+              <li class="mb-10 ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">4</span>
+                <h3 class="font-bold text-lg">Nubra → Pangong via Shyok</h3>
+                <p class="text-gray-600">Overnight Pangong.</p>
+              </li>
+              <li class="mb-10 ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">5</span>
+                <h3 class="font-bold text-lg">Pangong → Leh via Chang La</h3>
+                <p class="text-gray-600">Return to Leh.</p>
+              </li>
+              <li class="ml-6"><span
+                  class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full ring-8 ring-white">6</span>
+                <h3 class="font-bold text-lg">Buffer Monasteries • Departure</h3>
+                <p class="text-gray-600">Thiksey/Hemis/Shey as time permits. Airport drop.</p>
+              </li>
+            </ol>
+            <div class="flex flex-wrap gap-3">
+              <button class="booking-btn btn-primary text-white px-5 py-2 rounded-lg" data-package="Diamond Package">Add
+                to Booking</button>
+              <button class="copy-itinerary px-5 py-2 bg-gray-800 text-white rounded-lg" data-panel="diamond">Copy
+                Itinerary</button>
+            </div>
+            <pre id="itinerary-diamond-text" class="hidden">Diamond Itinerary (5N/6D)
+Day 1: Arrive Leh, acclimatize, local evening
+Day 2: Sham Valley up to Alchi
+Day 3: Leh → Nubra via Khardung La (Overnight Nubra)
+Day 4: Nubra → Pangong via Shyok (Overnight Pangong)
+Day 5: Pangong → Leh via Chang La
+Day 6: Monasteries / Buffer day (Departure)</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Stats -->
+    <section class="py-12 md:py-20 bg-stone-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-stone-900 opacity-20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-8 md:mb-16 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold mb-3 md:mb-4 font-serif">1,200+ Journeys. 0 Compromises.</h2>
+          <p class="text-sm md:text-xl text-stone-300 max-w-2xl mx-auto">Deep local knowledge & reliable fleet.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-center">
+          <!-- Stat 1 -->
+          <div
+            class="fade-in stats-visual p-6 md:p-10 rounded-2xl md:rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500">
+            <div
+              class="w-10 h-10 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2 counter font-serif text-amber-500" data-target="1200">0</div>
+            <p class="text-xs md:text-sm text-stone-300 font-medium uppercase">Happy Customers</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div
+            class="fade-in stats-visual p-6 md:p-10 rounded-2xl md:rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500">
+            <div
+              class="w-10 h-10 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2 counter font-serif text-amber-500" data-target="10">0</div>
+            <p class="text-xs md:text-sm text-stone-300 font-medium uppercase">Years Experience</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div
+            class="fade-in stats-visual p-6 md:p-10 rounded-2xl md:rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500">
+            <div
+              class="w-10 h-10 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+              <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2 font-serif text-amber-500">100%</div>
+            <p class="text-xs md:text-sm text-stone-300 font-medium uppercase">Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="py-12 md:py-20 bg-stone-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8 md:mb-16 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-4 font-serif flex items-center justify-center gap-3">
+            <span class="tibetan-flag">
+              <span class="flag-blue"></span>
+              <span class="flag-white"></span>
+              <span class="flag-red"></span>
+              <span class="flag-yellow"></span>
+              <span class="flag-green"></span>
+            </span>
+            Our Tour Packages
+            <span class="tibetan-flag">
+              <span class="flag-blue"></span>
+              <span class="flag-white"></span>
+              <span class="flag-red"></span>
+              <span class="flag-yellow"></span>
+              <span class="flag-green"></span>
+            </span>
+          </h2>
+          <p class="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">Altitude-aware planning & scenic routes.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <!-- Silver -->
+          <div
+            class="fade-in rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl p-4 md:p-8 flex flex-col card-hover-effect bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-stone-400"></div>
+            <div class="text-center mb-3 md:mb-6">
+              <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">Silver Package</h3>
+              <p class="text-green-600 font-bold text-xs md:text-sm uppercase">Group Booking</p>
+              <div class="text-2xl md:text-5xl font-bold gradient-text mb-1 md:mb-2">₹20,000 <span
+                  class="text-sm md:text-lg text-gray-500 font-medium">/ person</span></div>
+              <p class="text-gray-500 text-sm">3 Nights 4 Days</p>
+            </div>
+            <ul class="space-y-2 md:space-y-4 text-xs md:text-gray-600 text-gray-500 mb-3 md:mb-8 flex-grow">
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>3-Star Hotels</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Leh Local Sightseeing</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Sham Valley + Pangong</li>
+            </ul>
+            <button data-package="Silver Package" data-price="20000"
+              class="booking-btn w-full text-center btn-primary text-white px-4 md:px-6 py-2 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base">Book Now</button>
+          </div>
+
+          <!-- Gold -->
+          <div
+            class="fade-in rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl p-4 md:p-8 flex flex-col card-hover-effect bg-white relative overflow-hidden transform md:scale-105">
+            <div class="absolute top-0 left-0 w-full h-1 bg-amber-600"></div>
+            <span
+              class="absolute top-3 md:top-4 right-3 md:right-4 bg-amber-600 text-white text-xs font-bold px-2 md:px-4 py-1 rounded-full">POPULAR</span>
+            <div class="text-center mb-3 md:mb-6">
+              <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">Gold Package</h3>
+              <p class="text-green-600 font-bold text-xs md:text-sm uppercase">Group Booking</p>
+              <div class="text-2xl md:text-5xl font-bold gradient-text mb-1 md:mb-2">₹35,000 <span
+                  class="text-sm md:text-lg text-gray-500 font-medium">/ person</span></div>
+              <p class="text-gray-500 text-sm">4 Nights 5 Days</p>
+            </div>
+            <ul class="space-y-2 md:space-y-4 text-xs md:text-gray-600 text-gray-500 mb-3 md:mb-8 flex-grow">
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>3-Star Hotels</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Leh Local Sightseeing</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Sham Valley + Alchi</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Nubra Valley</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Nubra → Pangong</li>
+            </ul>
+            <button data-package="Gold Package" data-price="35000"
+              class="booking-btn w-full text-center btn-primary text-white px-4 md:px-6 py-2 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base">Book Now</button>
+          </div>
+
+          <!-- Diamond -->
+          <div
+            class="fade-in rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl p-4 md:p-8 flex flex-col card-hover-effect bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-amber-800"></div>
+            <div class="text-center mb-3 md:mb-6">
+              <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">Diamond Package</h3>
+              <p class="text-green-600 font-bold text-xs md:text-sm uppercase">Group Booking</p>
+              <div class="text-2xl md:text-5xl font-bold gradient-text mb-1 md:mb-2">₹38,000 <span
+                  class="text-sm md:text-lg text-gray-500 font-medium">/ person</span></div>
+              <p class="text-gray-500 text-sm">5 Nights 6 Days</p>
+            </div>
+            <ul class="space-y-2 md:space-y-4 text-xs md:text-gray-600 text-gray-500 mb-3 md:mb-8 flex-grow">
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>3-Star Hotels</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Sham Valley + Alchi</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Nubra + Pangong</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Pangong → Leh</li>
+              <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 mt-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>Monasteries</li>
+            </ul>
+            <button data-package="Diamond Package" data-price="38000"
+              class="booking-btn w-full text-center btn-primary text-white px-4 md:px-6 py-2 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fleet -->
+    <section id="fleet" class="py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8 md:mb-16 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-4 font-serif">Our Fleet</h2>
+          <p class="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">Terrain-ready vehicles with daily safety checks.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div class="fade-in card-hover-effect rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+            <img src="toyota.jpeg" loading="lazy" alt="Toyota Innova"
+              class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-base md:text-xl">Toyota Innova</h3>
+              <p class="text-gray-600 text-sm mt-1">Best for families • Comfortable</p>
+            </div>
+          </div>
+          <div class="fade-in card-hover-effect rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+            <img src="crysta.jpeg" loading="lazy" alt="Toyota Crysta" class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-base md:text-xl">Toyota Crysta</h3>
+              <p class="text-gray-600 text-sm mt-1">Premium comfort • Long routes</p>
+            </div>
+          </div>
+          <div class="fade-in card-hover-effect rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+            <img src="scorpio.jpeg" loading="lazy" alt="Mahindra Scorpio"
+              class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-base md:text-xl">Mahindra Scorpio</h3>
+              <p class="text-gray-600 text-sm mt-1">Rugged • High clearance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery + Lightbox -->
+    <section id="gallery" class="py-12 md:py-20 bg-stone-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-6 md:mb-12 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-4 font-serif">Gallery</h2>
+          <p class="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">Moments from Ladakh.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+          <figure class="relative group overflow-hidden rounded-lg md:rounded-2xl card-hover-effect">
+            <img src="pangong.jpg" loading="lazy" alt="Pangong Lake" class="w-full h-32 md:h-48 object-cover"
+              data-lightbox data-full="pangong.jpg">
+          </figure>
+          <figure class="relative group overflow-hidden rounded-lg md:rounded-2xl card-hover-effect">
+            <img src="nubra.jpg" loading="lazy" alt="Nubra Valley" class="w-full h-32 md:h-48 object-cover"
+              data-lightbox data-full="nubra.jpg">
+          </figure>
+          <figure class="relative group overflow-hidden rounded-lg md:rounded-2xl card-hover-effect">
+            <img src="thiksey.jpg" loading="lazy" alt="Thiksey Monastery" class="w-full h-32 md:h-48 object-cover"
+              data-lightbox data-full="thiksey.jpg">
+          </figure>
+          <figure class="relative group overflow-hidden rounded-lg md:rounded-2xl card-hover-effect">
+            <img src="tso.jpg" loading="lazy" alt="Tso Moriri" class="w-full h-32 md:h-48 object-cover"
+              data-lightbox data-full="tso.jpg">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+<section class="py-12 md:py-20 bg-stone-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-6 md:mb-10 fade-in">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-3 font-serif">What Travelers Say</h2>
+          <p class="text-sm md:text-base text-gray-600">Real stories from Ladakh journeys.</p>
+        </div>
+        <div class="slider fade-in rounded-xl md:rounded-2xl shadow-lg md:shadow-xl bg-white">
+          <div class="slides" id="testimonial-slides">
+            <div class="slide p-6 md:p-12">
+              <div class="flex items-center mb-3 md:mb-4">
+                <div class="flex text-yellow-500 mr-2 md:mr-3"><span>★★★★★</span></div><span
+                  class="text-xs md:text-sm text-gray-500">Google Reviews</span>
+              </div>
+              <p class="text-sm md:text-lg text-gray-700">Ladakh Ride made our dream trip seamless. Our driver was super patient with acclimatization!</p>
+              <div class="mt-3 md:mt-4 font-semibold text-sm md:text-base">— Anjali & Saurabh, Mumbai</div>
+            </div>
+            <div class="slide p-6 md:p-12">
+              <div class="flex items-center mb-3 md:mb-4">
+                <div class="flex text-yellow-500 mr-2 md:mr-3"><span>★★★★★</span></div><span class="text-xs md:text-sm text-gray-500">Trip
+                  Experience</span>
+              </div>
+              <p class="text-sm md:text-lg text-gray-700">Clean Crysta, punctual pickups, and perfect Pangong sunrise. Highly recommend!</p>
+              <div class="mt-3 md:mt-4 font-semibold text-sm md:text-base">— Priya, Bengaluru</div>
+            </div>
+            <div class="slide p-6 md:p-12">
+              <div class="flex items-center mb-3 md:mb-4">
+                <div class="flex text-yellow-500 mr-2 md:mr-3"><span>★★★★★</span></div><span class="text-xs md:text-sm text-gray-500">Family Trip</span>
+              </div>
+              <p class="text-sm md:text-lg text-gray-700">Reliable and safe on high passes. They handled permits and route changes.</p>
+              <div class="mt-3 md:mt-4 font-semibold text-sm md:text-base">— Karan, Delhi</div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2 py-3 md:py-4">
+            <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-300" data-slide="0" aria-label="Slide 1"></button>
+            <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-300" data-slide="1" aria-label="Slide 2"></button>
+            <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-300" data-slide="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers / Promo -->
+    <section id="offers" class="py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-6 md:mb-10">
+          <h2 class="text-2xl md:text-5xl font-bold gradient-text mb-2 md:mb-3 font-serif">Seasonal Offers</h2>
+          <p class="text-sm md:text-base text-gray-600">Use a promo code in the booking form.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <span class="text-xs font-bold px-2 md:px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full">Popular</span>
+            <h3 class="text-base md:text-xl font-bold mt-2 md:mt-3">LADAKH10</h3>
+            <p class="text-xs md:text-gray-600 text-gray-500 mt-1 md:mt-2">10% off (max ₹3,000) for 5+ days.</p>
+            <div class="flex gap-2 mt-3 md:mt-4">
+              <button class="copy-code btn-primary text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm" data-code="LADAKH10">Copy</button>
+              <button class="booking-btn bg-gray-800 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm"
+                data-package="General Inquiry">Apply</button>
+            </div>
+          </div>
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <span class="text-xs font-bold px-2 md:px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Flat</span>
+            <h3 class="text-base md:text-xl font-bold mt-2 md:mt-3">SUMMER500</h3>
+            <p class="text-xs md:text-gray-600 text-gray-500 mt-1 md:mt-2">Flat ₹500 off any package.</p>
+            <div class="flex gap-2 mt-3 md:mt-4">
+              <button class="copy-code btn-primary text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm" data-code="SUMMER500">Copy</button>
+              <button class="booking-btn bg-gray-800 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm"
+                data-package="General Inquiry">Apply</button>
+            </div>
+          </div>
+          <div class="card-hover-effect p-4 md:p-6 rounded-xl md:rounded-2xl">
+            <span class="text-xs font-bold px-2 md:px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Group</span>
+            <h3 class="text-base md:text-xl font-bold mt-2 md:mt-3">GROUP4</h3>
+            <p class="text-xs md:text-gray-600 text-gray-500 mt-1 md:mt-2">7% off (max ₹5,000) for 4+ travelers.</p>
+            <div class="flex gap-2 mt-3 md:mt-4">
+              <button class="copy-code btn-primary text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm" data-code="GROUP4">Copy</button>
+              <button class="booking-btn bg-gray-800 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm"
+                data-package="General Inquiry">Apply</button>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 mt-4 md:mt-6 text-center">T&Cs: One promo per booking.</p>
+      </div>
+    </section>
+
+    <!-- Blog / Tour Guide -->
+<section class="py-12 md:py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-4xl font-bold text-center text-gray-800 mb-6 md:mb-12">Tour Guide</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div class="bg-gray-50 rounded-lg md:rounded-xl shadow-lg overflow-hidden card-hover-effect">
+            <img src="taxi.jpg" loading="lazy" alt="Cab" class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-sm md:text-lg text-gray-800">How to Hire the Right Cab</h3>
+              <a href="how-to-hire-cab.html" class="text-blue-600 font-semibold mt-3 md:mt-4 inline-block text-sm">Read More →</a>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg md:rounded-xl shadow-lg overflow-hidden card-hover-effect">
+            <img src="prayer.jpg" loading="lazy" alt="Prayer flags" class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-sm md:text-lg text-gray-800">Top 5 Do's & Don'ts</h3>
+              <a href="dos-and-donts.html" class="text-blue-600 font-semibold mt-3 md:mt-4 inline-block text-sm">Read More →</a>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg md:rounded-xl shadow-lg overflow-hidden card-hover-effect">
+            <img src="pangong.jpg" loading="lazy" alt="Pangong" class="w-full h-40 md:h-48 object-cover">
+            <div class="p-4 md:p-6">
+              <h3 class="font-bold text-sm md:text-lg text-gray-800">15 Must-Visit Destinations</h3>
+              <a href="must-visit-destinations.html"
+                class="text-blue-600 font-semibold mt-3 md:mt-4 inline-block text-sm">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & FAQ -->
+<section id="about" class="py-12 md:py-16">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div class="corner-decor">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">About Us</h2>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">We're a proud Ladakhi team providing the safest and most memorable journeys in Leh-Ladakh. With licensed local drivers, premium fleet, and 24/7 support.</p>
+          <div class="mt-4 md:mt-5 flex flex-wrap items-center gap-2 md:gap-3 text-gray-600">
+            <span class="inline-flex items-center bg-gray-100 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Local & Family-run</span>
+            <span class="inline-flex items-center bg-gray-100 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Permit Assistance</span>
+            <span class="inline-flex items-center bg-gray-100 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Emergency Ready</span>
+          </div>
+          <div class="mt-6 md:mt-8 p-4 md:p-6 bg-amber-50 rounded-xl border border-amber-100">
+            <p class="font-handwriting text-xl md:text-2xl text-amber-900 leading-relaxed">
+              "We don't just drive you; we welcome you into our home."
+            </p>
+            <p class="mt-3 md:mt-4 font-bold text-amber-800 text-right font-serif">— Tenzin & Family</p>
+          </div>
+        </div>
+        <div aria-labelledby="faq-heading">
+          <h2 id="faq-heading" class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">Frequently Asked Questions</h2>
+          <div class="space-y-3 md:space-y-4" id="faq-container" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item bg-white p-3 md:p-4 rounded-lg shadow-sm border" itemprop="mainEntity" itemscope
+              itemtype="https://schema.org/Question">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left font-semibold text-gray-700 text-sm md:text-base">
+                <span itemprop="name">Are Ladakh Ride cabs genuine?</span>
+                <span class="icon-plus text-blue-500"><svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg></span>
+              </button>
+              <div class="answer mt-2 text-gray-600 text-sm" itemscope itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes. We're a registered, local agency with 10+ years of experience.</p>
+              </div>
+            </div>
+            <div class="faq-item bg-white p-3 md:p-4 rounded-lg shadow-sm border" itemprop="mainEntity" itemscope
+              itemtype="https://schema.org/Question">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left font-semibold text-gray-700 text-sm md:text-base">Do you provide support?<span class="icon-plus text-blue-500"><svg
+                    class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg></span></button>
+              <div class="answer mt-2 text-gray-600 text-sm" itemscope itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer">
+                <p itemprop="text">Absolutely. We assist with planning, permits, and real-time route changes.</p>
+              </div>
+            </div>
+            <div class="faq-item bg-white p-3 md:p-4 rounded-lg shadow-sm border" itemprop="mainEntity" itemscope
+              itemtype="https://schema.org/Question">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left font-semibold text-gray-700 text-sm md:text-base">Are vehicles well maintained?<span class="icon-plus text-blue-500"><svg
+                    class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg></span></button>
+              <div class="answer mt-2 text-gray-600 text-sm" itemscope itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes. Our drivers are local, experienced, and licensed. Fleet is terrain-ready.</p>
+              </div>
+            </div>
+            <div class="faq-item bg-white p-3 md:p-4 rounded-lg shadow-sm border" itemprop="mainEntity" itemscope
+              itemtype="https://schema.org/Question">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left font-semibold text-gray-700 text-sm md:text-base">Payments accepted?<span class="icon-plus text-blue-500"><svg class="w-4 h-4 md:w-6 md:h-6"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg></span></button>
+              <div class="answer mt-2 text-gray-600 text-sm" itemscope itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer">
+                <p itemprop="text">Both. Pay online to confirm, or via UPI/cash during your tour.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-stone-900 text-white">
+    <div class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+      <!-- Tibetan decorative divider -->
+      <div class="section-divider mb-8"></div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+        <div>
+          <h3 class="text-xl font-bold flex items-center gap-2">
+            <span class="tibetan-flag">
+              <span class="flag-blue"></span>
+              <span class="flag-white"></span>
+              <span class="flag-red"></span>
+              <span class="flag-yellow"></span>
+              <span class="flag-green"></span>
+            </span>
+            Ladakh Ride
+          </h3>
+          <p class="mt-4 text-gray-400">Your trusted partner for exploring Ladakh. Travel safely, travel local.</p>
+          <p class="mt-4 text-gray-400 text-sm">GST Registered • Permit Assistance • Airport Pickup</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold">Quick Links</h4>
+          <ul class="mt-4 space-y-2">
+            <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+            <li><a href="#packages" class="text-gray-400 hover:text-white">Packages</a></li>
+            <li><a href="#itinerary" class="text-gray-400 hover:text-white">Itinerary</a></li>
+
+            <li><a href="#fleet" class="text-gray-400 hover:text-white">Fleet</a></li>
+            <li><a href="#gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
+            <li><a href="#offers" class="text-gray-400 hover:text-white">Offers</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold">Contact Us</h4>
+          <ul class="mt-4 space-y-3 text-gray-400">
+            <li>Email: <a href="mailto:contact@ladakhride.com" class="hover:text-white">contact@ladakhride.com</a></li>
+            <li>Phone: <a href="tel:+911234567890" class="hover:text-white">+91 9797796784</a></li>
+            <li class="flex items-start">
+              <a href="https://wa.me/919797796784" target="_blank" class="hover:text-white flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-2 mt-1">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654z" />
+                </svg>
+                <span>WhatsApp: +91 9797796784</span>
+              </a>
+            </li>
+            <li class="flex items-start">
+              <a href="https://wa.me/919797796784" target="_blank" class="hover:text-white flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-2 mt-1">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654z" />
+                </svg>
+                <span>WhatsApp: +91 9797796784</span>
+              </a>
+            </li>
+            <li>Address: <a class="hover:text-white" target="_blank"
+                href="https://maps.google.com/?q=Leh,+Ladakh+194101">Leh, Ladakh, 194101</a></li>
+            <li>Hours: 24/7</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold">Follow Us</h4>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><svg class="w-6 h-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12C22 6.477 17.523 2 12 2S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+              </svg></a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"><svg class="w-6 h-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 22 5.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743A11.65 11.65 0 0 1 3.188 5.69a4.106 4.106 0 0 0 1.27 5.477 4.072 4.072 0 0 1-1.487-.412v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 2 18.407a11.616 11.616 0 0 0 6.29 1.84" />
+              </svg></a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"><svg class="w-6 h-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 0 1 1.772 1.153 4.902 4.902 0 0 1 1.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 0 1-1.153 1.772 4.902 4.902 0 0 1-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 0 1-1.772-1.153 4.902 4.902 0 0 1-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 0 1 1.153-1.772A4.902 4.902 0 0 1 6.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.148 2 12.315 2z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Ladakh Ride. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919797796784?text=Hello%20Ladakh%20Ride!%20I'm%20interested%20in%20your%20services."
+    target="_blank"
+    class="fixed bottom-20 md:bottom-6 right-6 bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-700 transition-all duration-300 transform hover:scale-110 z-30 float-animation"
+    aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654z" />
+    </svg>
+    <div
+      class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold animate-pulse">
+      24/7</div>
+  </a>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta md:hidden text-white">
+    <div class="container mx-auto px-3 py-2 flex items-center justify-between gap-2">
+      <span class="text-xs whitespace-nowrap">Plan your trip with experts</span>
+      <button data-package="Quick Mobile Inquiry"
+        class="booking-btn bg-white text-amber-700 font-bold px-3 py-1.5 rounded-lg text-xs whitespace-nowrap">Get Quote</button>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden opacity-0"
+    aria-modal="true" role="dialog" aria-labelledby="modal-title">
+    <div
+      class="bg-white rounded-lg shadow-2xl w-full max-w-2xl p-6 md:p-8 transform transition-all max-h-[90vh] overflow-y-auto"
+      id="modal-panel" tabindex="-1">
+      <div id="form-content">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold text-gray-800" id="modal-title">Book Your Trip</h2>
+          <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800 text-3xl leading-none"
+            aria-label="Close">&times;</button>
+        </div>
+        <form id="booking-form">
+          <input type="hidden" id="package" name="package">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label for="people" class="block text-gray-700 font-semibold mb-2">Number of Travelers</label>
+              <input type="number" id="people" name="people" min="1"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="phone" class="block text-gray-700 font-semibold mb-2">Mobile Number</label>
+              <input type="tel" id="phone" name="phone"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label for="altPhone" class="block text-gray-700 font-semibold mb-2">Alternate Mobile Number</label>
+              <input type="tel" id="altPhone" name="altPhone"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <label for="startDate" class="block text-gray-700 font-semibold mb-2">Arrival Date in Leh</label>
+              <input type="date" id="startDate" name="startDate"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="arrivalTime" class="block text-gray-700 font-semibold mb-2">Arrival Time</label>
+              <input type="time" id="arrivalTime" name="arrivalTime"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="arrivalMode" class="block text-gray-700 font-semibold mb-2">Mode of Arrival</label>
+              <select id="arrivalMode" name="arrivalMode"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="">Select...</option>
+                <option>Flight</option>
+                <option>Bus</option>
+                <option>Own Vehicle</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="endDate" class="block text-gray-700 font-semibold mb-2">End Date (Departure)</label>
+              <input type="date" id="endDate" name="endDate"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+              <input type="email" id="email" name="email"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="vehicle" class="block text-gray-700 font-semibold mb-2">Vehicle Preference</label>
+              <select id="vehicle" name="vehicle"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="">Any</option>
+                <option>Innova</option>
+                <option>Crysta</option>
+                <option>Scorpio</option>
+              </select>
+            </div>
+            <div>
+              <label for="pickup" class="block text-gray-700 font-semibold mb-2">Pickup (Hotel/Airport)</label>
+              <input type="text" id="pickup" name="pickup"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="e.g., IXL Airport">
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message or Special Requests</label>
+            <textarea id="message" name="message" rows="4"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Add destinations (Turtuk/Hanle), permit help, child seats, etc."></textarea>
+          </div>
+
+          <button type="submit" id="submit-booking-btn"
+            class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center">
+            <span id="submit-text">Submit Request</span>
+            <svg id="loading-spinner" class="animate-spin -ml-1 ml-3 h-5 w-5 text-white hidden"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div id="success-message" class="hidden text-center py-8">
+        <h2 class="text-3xl font-bold text-amber-700 mb-4 font-serif">Your Journey Begins Here!</h2>
+        <p class="text-gray-600 mb-6 italic">"Thank you for choosing us. We’ve received your inquiry and will call you
+          shortly to plan your perfect Ladakh trip."</p>
+        <p class="text-sm font-bold text-gray-800 mb-6">— Tenzin & Team</p>
+        <a id="whatsapp-confirm-btn" href="#" target="_blank"
+          class="inline-block bg-green-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 mb-4 transition transform hover:scale-105">
+          Chat on WhatsApp (Faster)
+        </a>
+        <br>
+        <button id="close-success-btn" class="mt-2 text-gray-500 hover:text-gray-800 underline text-sm">Return to
+          Home</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 z-50 hidden opacity-0 flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-4 right-5 text-white text-3xl leading-none"
+      aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] rounded-lg shadow-2xl">
+  </div>
+
+  <script type="module">
+    async function main() {
+      // Mobile menu
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenuButton?.addEventListener('click', () => {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.classList.toggle('hidden');
+        mobileMenuCloseBtn.classList.toggle('hidden');
+      });
+
+      // Mobile menu close button
+      const mobileMenuCloseBtn = document.getElementById('mobile-menu-close');
+      mobileMenuCloseBtn?.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.classList.remove('hidden');
+        mobileMenuCloseBtn.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      });
+
+      // Close menu when clicking a link
+      mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuButton.classList.remove('hidden');
+          mobileMenuCloseBtn.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // FAQ toggle
+      const faqContainer = document.getElementById('faq-container');
+      faqContainer?.addEventListener('click', (e) => {
+        const faqQuestion = e.target.closest('.faq-question');
+        if (faqQuestion) faqQuestion.parentElement.classList.toggle('open');
+      });
+
+      // Modal + form
+      initBookingModal();
+
+      // Rotating text
+      initRotatingText();
+
+      // Scroll-in animations
+      initScrollAnimations();
+
+      // Counters
+      initCounters();
+
+      // Testimonials slider
+      initSlider();
+
+      // Advisory timestamp
+      const advisoryUpdated = document.getElementById('advisory-updated');
+      if (advisoryUpdated) {
+        const now = new Date();
+        advisoryUpdated.textContent = `Updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+      }
+
+      // Active nav highlight
+      initActiveNav();
+
+      // New features
+      initWeatherWidget();
+      initLightbox();
+      initItineraryTabs();
+
+      initCopyPromoButtons();
+      initCopyItineraryButtons();
+    }
+
+    function initBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      const bookingBtns = document.querySelectorAll('.booking-btn');
+      const packageInput = document.getElementById('package');
+      const modalTitle = document.getElementById('modal-title');
+      const bookingForm = document.getElementById('booking-form');
+      const submitBtn = document.getElementById('submit-booking-btn');
+      const submitText = document.getElementById('submit-text');
+      const loadingSpinner = document.getElementById('loading-spinner');
+      const formContent = document.getElementById('form-content');
+      const successMessage = document.getElementById('success-message');
+      const closeSuccessBtn = document.getElementById('close-success-btn');
+      const modalPanel = document.getElementById('modal-panel');
+      let focusTrapPrev = null;
+
+      const openModal = (packageName, price) => {
+        packageInput.value = packageName || 'General Inquiry';
+        modalTitle.textContent = `Inquiry for: ${packageInput.value}`;
+        formContent.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+        bookingForm.reset();
+
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+
+        // focus trap
+        focusTrapPrev = document.activeElement;
+        modalPanel.setAttribute('tabindex', '-1');
+        modalPanel.focus();
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+        if (focusTrapPrev) focusTrapPrev.focus();
+      };
+
+      bookingBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const pkg = btn.dataset.package;
+
+          if (['Silver Package', 'Gold Package', 'Diamond Package'].includes(pkg)) {
+            openModal(pkg);
+          } else {
+            // Redirect to WhatsApp for other inquiries
+            const text = encodeURIComponent(`Hello Ladakh Ride! I am interested in: ${pkg}`);
+            window.open(`https://wa.me/919797796784?text=${text}`, '_blank');
+          }
+        });
+      });
+
+      closeModalBtn.addEventListener('click', closeModal);
+      closeSuccessBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      window.addEventListener('keydown', (e) => { if (!modal.classList.contains('hidden') && e.key === 'Escape') closeModal(); });
+
+
+      // Submit
+      bookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        submitText.classList.add('hidden');
+        loadingSpinner.classList.remove('hidden');
+        submitBtn.disabled = true;
+
+        const formData = {
+          name: document.getElementById('name').value,
+          people: document.getElementById('people').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          altPhone: document.getElementById('altPhone').value,
+          package: packageInput.value,
+          startDate: document.getElementById('startDate').value,
+          arrivalTime: document.getElementById('arrivalTime').value,
+          arrivalMode: document.getElementById('arrivalMode').value,
+          endDate: document.getElementById('endDate').value,
+          vehicle: document.getElementById('vehicle').value,
+          pickup: document.getElementById('pickup').value,
+          message: document.getElementById('message').value,
+        };
+
+        try {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+
+          // 1. Prepare WhatsApp Message
+          const whatsappMessage = `Hello Ladakh Ride! I would like to confirm my booking inquiry:
+
+Name: ${formData.name}
+Travelers: ${formData.people}
+Package: ${formData.package}
+Phone: ${formData.phone}
+Alt. Phone: ${formData.altPhone || '-'}
+Email: ${formData.email}
+
+Arrival Date in Leh: ${formData.startDate || '-'}
+Arrival Time: ${formData.arrivalTime || '-'}
+Mode of Arrival: ${formData.arrivalMode || '-'}
+End Date: ${formData.endDate || '-'}
+
+Vehicle Preference: ${formData.vehicle || 'Any'}
+Pickup: ${formData.pickup || '-'}
+
+Message: ${formData.message}
+
+Please confirm my booking and provide further details. Thank you!`;
+
+          const whatsappBtn = document.getElementById('whatsapp-confirm-btn');
+          whatsappBtn.href = `https://wa.me/919797796784?text=${encodeURIComponent(whatsappMessage)}`;
+
+          // 2. Send to Google Sheets (Google Apps Script)
+          try {
+            const sheetUrl = 'https://script.google.com/macros/s/AKfycbzBxo-nB-lDckHk2Eh3nZuaOx6VPzXNJqi2xlO2How7t8SC6kwprvIjUsXUpVyog_o-/exec';
+            const sheetData = {
+              name: formData.name,
+              email: formData.email,
+              phone: formData.phone,
+              altPhone: formData.altPhone,
+              package: formData.package,
+              travelers: formData.people,
+              arrivalDate: formData.startDate,
+              arrivalTime: formData.arrivalTime,
+              arrivalMode: formData.arrivalMode,
+              endDate: formData.endDate,
+              vehicle: formData.vehicle,
+              pickup: formData.pickup,
+              message: formData.message,
+              timestamp: new Date().toISOString()
+            };
+            
+            await fetch(sheetUrl, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {
+                'Content-Type': 'text/plain',
+              },
+              body: JSON.stringify(sheetData)
+            });
+            console.log("Data sent to Google Sheets");
+          } catch (sheetError) {
+            console.log("Google Sheets submission skipped (CORS):", sheetError);
+          }
+
+          formContent.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+
+          console.log("Booking inquiry submitted:", formData);
+        } catch (error) {
+          console.error("Error during submission: ", error);
+          alert("There was an error submitting your request. Please try again.");
+        } finally {
+          submitText.classList.remove('hidden');
+          loadingSpinner.classList.add('hidden');
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    // Rotating subtitle
+    function initRotatingText() {
+      const container = document.getElementById('rotating-subtitle');
+      if (!container) return;
+      const texts = container.querySelectorAll('.rotating-text');
+      let currentIndex = 0;
+      setInterval(() => {
+        texts[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % texts.length;
+        texts[currentIndex].classList.add('active');
+      }, 3500);
+    }
+
+    // Scroll animations
+    function initScrollAnimations() {
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, observerOptions);
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }
+
+    // Counters
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter');
+      const obs = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = +el.getAttribute('data-target');
+            let current = 0;
+            const step = Math.ceil(target / 50);
+            const i = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(i);
+              }
+              el.textContent = current.toLocaleString('en-IN');
+            }, 30);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.6 });
+      counters.forEach(c => obs.observe(c));
+    }
+
+    // Testimonials slider
+    function initSlider() {
+      const slides = document.getElementById('testimonial-slides');
+      if (!slides) return;
+      const dots = slides.parentElement.querySelectorAll('[data-slide]');
+      let index = 0;
+      function goTo(i) {
+        index = i;
+        slides.style.transform = `translateX(-${i * 100}%)`;
+        dots.forEach((d, di) => d.classList.toggle('bg-indigo-500', di === i));
+      }
+      dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
+      setInterval(() => goTo((index + 1) % dots.length), 6000);
+      goTo(0);
+    }
+
+    // Active nav highlight
+    // Active nav highlight (Optimized)
+    function initActiveNav() {
+      const navLinks = document.querySelectorAll('a.nav-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              const href = link.getAttribute('href') || '';
+              const linkId = href.replace('#', '');
+              link.classList.toggle('text-blue-200', linkId === id);
+              // Also toggle 'text-stone-600' vs 'text-white' if needed, or just rely on base styles
+            });
+          }
+        });
+      }, { threshold: 0.5 }); // Trigger when 50% visible
+
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+      });
+    }
+
+    // Weather widget (Open-Meteo)
+    function initWeatherWidget() {
+      const lat = 34.1526, lon = 77.5771; // Leh
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min&timezone=auto`;
+      const tempEl = document.getElementById('wx-temp');
+      const windEl = document.getElementById('wx-wind');
+      const hlEl = document.getElementById('wx-highlow');
+      const upEl = document.getElementById('wx-updated');
+      if (!tempEl || !windEl || !hlEl || !upEl) return;
+
+      fetch(url).then(r => r.json()).then(d => {
+        const t = Math.round(d.current.temperature_2m);
+        const w = Math.round(d.current.wind_speed_10m);
+        const tmax = Math.round(d.daily.temperature_2m_max[0]);
+        const tmin = Math.round(d.daily.temperature_2m_min[0]);
+        tempEl.textContent = `${t}°C`;
+        windEl.textContent = `Wind: ${w} km/h`;
+        hlEl.textContent = `H: ${tmax}° • L: ${tmin}°`;
+        const now = new Date();
+        upEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }).catch(() => {
+        tempEl.textContent = '—°C';
+        windEl.textContent = 'Wind: —';
+        hlEl.textContent = 'H: —° • L: —°';
+        upEl.textContent = 'Offline';
+      });
+    }
+
+    // Simple Lightbox
+    function initLightbox() {
+      const overlay = document.getElementById('lightbox');
+      const imgTarget = document.getElementById('lightbox-img');
+      const closeBtn = document.getElementById('lightbox-close');
+      if (!overlay || !imgTarget) return;
+
+      document.addEventListener('click', (e) => {
+        const t = e.target;
+        if (t && t.hasAttribute('data-lightbox')) {
+          const full = t.getAttribute('data-full') || t.src;
+          imgTarget.src = full;
+          overlay.classList.add('lightbox-show');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      function close() {
+        overlay.classList.remove('lightbox-show');
+        imgTarget.src = '';
+        document.body.style.overflow = '';
+      }
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+      closeBtn?.addEventListener('click', close);
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    }
+
+    // Itinerary tabs
+    function initItineraryTabs() {
+      const tabs = document.querySelectorAll('.itinerary-tab');
+      const panels = {
+        silver: document.getElementById('itinerary-silver'),
+        gold: document.getElementById('itinerary-gold'),
+        diamond: document.getElementById('itinerary-diamond')
+      };
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabs.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const t = btn.getAttribute('data-target');
+          Object.entries(panels).forEach(([k, el]) => el.classList.toggle('hidden', k !== t));
+        });
+      });
+    }
+
+
+
+    // Copy promo buttons
+    function initCopyPromoButtons() {
+      document.querySelectorAll('.copy-code').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const code = btn.getAttribute('data-code');
+          try {
+            await navigator.clipboard.writeText(code);
+          } catch { }
+          const promoInput = document.getElementById('promoCode');
+          if (promoInput) promoInput.value = code;
+        });
+      });
+    }
+
+    // Copy itinerary buttons
+    function initCopyItineraryButtons() {
+      document.querySelectorAll('.copy-itinerary').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const panel = btn.getAttribute('data-panel');
+          const pre = document.getElementById(`itinerary-${panel}-text`);
+          if (!pre) return;
+          try {
+            await navigator.clipboard.writeText(pre.innerText.trim());
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy Itinerary', 1200);
+          } catch {
+            alert('Copy failed. Please try again.');
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', main);
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Ladakh Ride",
+    "url": "https://ladakh-ride.vercel.app/",
+    "logo": "https://www.ladakhride.com/logo.png",
+    "image": "https://images.unsplash.com/photo-1605649487212-47bdab0622e5?q=80&w=1600&auto=format&fit=crop",
+    "telephone": "+91-9797796784",
+    "email": "contact@ladakhmaxicab1171@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Leh",
+      "addressLocality": "Leh",
+      "addressRegion": "Ladakh",
+      "postalCode": "194101",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Ladakh",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "₹₹",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "1200" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Are Ladakh Ride cabs genuine?","acceptedAnswer":{"@type":"Answer","text":"Yes. We’re a registered, local agency with 10+ years of experience and verified, licensed drivers."}},
+      {"@type":"Question","name":"Do you provide support before, during, and after the tour?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We assist with planning, permits, real-time route changes, and post-tour follow-ups."}},
+      {"@type":"Question","name":"Are your drivers qualified and vehicles well maintained?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our drivers are local, experienced, and licensed. Fleet is terrain-ready with regular checks."}},
+      {"@type":"Question","name":"Do you accept online or cash payments?","acceptedAnswer":{"@type":"Answer","text":"Both. Pay online to confirm, and pay the balance via UPI or cash during your tour."}}
+    ]
+  }
+  </script>
+</body>
+
+</html>

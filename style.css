@@ -1,0 +1,472 @@
+:root {
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Ladakhi Color Palette */
+  --ladakh-sky: #4A90B8;
+  --ladakh-sunset: #D4A574;
+  --ladakh-maroon: #8B2635;
+  --ladakh-gold: #C9A227;
+  --ladakh-white: #F5F5F0;
+  --ladakh-stone: #8B8378;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F5F0;
+  color: #44403c;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Texture & Depth - Mountain Landscape Feel */
+.bg-textured {
+  background-color: #F5F5F0;
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(74, 144, 184, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Organic Stagger Delays */
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+.stagger-5 { transition-delay: 500ms; }
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ensure smoother mobile perf for fixed background */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+  background-image: linear-gradient(to bottom, rgba(30, 27, 75, 0.3), rgba(30, 27, 75, 0.6)), url('ladakhi_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  position: relative;
+  z-index: 1;
+}
+
+/* Rotating text */
+.rotating-text {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95) rotate(-2deg);
+  transition: all 0.8s var(--ease-out-expo);
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  white-space: nowrap;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.rotating-text.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0) scale(1) rotate(0deg);
+}
+
+#rotating-subtitle {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  max-width: 100vw;
+}
+
+/* Glass Effect - Warm Ladakhi tone */
+.glass-effect {
+  background: linear-gradient(135deg, rgba(245, 245, 240, 0.9) 0%, rgba(212, 165, 116, 0.15) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139, 38, 53, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Featured Card - Ladakhi inspired */
+.card-featured {
+  background: linear-gradient(135deg, #fff 0%, #FDF6EE 100%);
+  border: 1px solid rgba(139, 38, 53, 0.15);
+  z-index: 10;
+  box-shadow: 0 20px 40px -10px rgba(139, 38, 53, 0.1), 0 0 30px rgba(201, 162, 39, 0.1);
+}
+
+@media (min-width: 768px) {
+  .card-featured {
+    transform: scale(1.05);
+  }
+  .card-featured:hover {
+    transform: scale(1.08) translateY(-10px);
+  }
+}
+
+/* Organic Cards */
+.card-hover-effect {
+  transition: all 0.5s var(--ease-spring);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(139, 38, 53, 0.08);
+  will-change: transform;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px -10px rgba(139, 38, 53, 0.15), 0 0 20px rgba(201, 162, 39, 0.1);
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 10;
+}
+
+/* Visual Stats (Storytelling) */
+.stats-visual {
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+/* Sticker Effect */
+.sticker {
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s var(--ease-spring);
+  display: inline-block;
+}
+
+.sticker:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Handwriting Font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25em;
+}
+
+/* FAQ */
+.faq-item .answer {
+  transition: all 0.6s var(--ease-out-expo);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.faq-item.open .answer {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.faq-item.open .icon-plus {
+  transform: rotate(45deg);
+}
+
+.icon-plus {
+  transition: transform 0.5s var(--ease-spring);
+}
+
+/* Modal */
+#booking-modal {
+  transition: opacity 0.4s var(--ease-out-expo);
+}
+
+#modal-panel {
+  transition: transform 0.5s var(--ease-spring);
+  transform: scale(0.95) translateY(20px);
+}
+
+/* Float animation */
+@keyframes float-organic {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(-4px) rotate(-1deg); }
+}
+
+.float-animation {
+  animation: float-organic 6s ease-in-out infinite;
+}
+
+/* Gradient Text - Ladakhi Colors (Maroon & Gold) */
+.gradient-text {
+  color: #8B2635;
+  background: linear-gradient(135deg, #8B2635 0%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons - Ladakhi Inspired */
+.btn-primary {
+  background: linear-gradient(135deg, #8B2635 0%, #A8333D 100%);
+  color: white;
+  transition: all 0.4s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(139, 38, 53, 0.3), 0 2px 4px -1px rgba(139, 38, 53, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #A8333D 0%, #C9A227 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 25px -5px rgba(139, 38, 53, 0.4), 0 8px 10px -6px rgba(139, 38, 53, 0.1);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 4px rgba(139, 38, 53, 0.2);
+}
+
+.focus-visible:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 2px;
+}
+
+/* Scroll Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Navigation */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #8B2635;
+  transition: width 0.4s var(--ease-spring), left 0.4s var(--ease-spring);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Stats */
+.stats-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s var(--ease-spring);
+}
+
+.stats-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Sticky mobile CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #8B2635 0%, #A8333D 100%);
+  backdrop-filter: blur(8px);
+  z-index: 40;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Testimonial slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide {
+  min-width: 100%;
+}
+
+/* Price pill */
+.price-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.price-pill:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Shimmer */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* Lightbox */
+#lightbox {
+  transition: opacity 0.4s ease;
+}
+
+.lightbox-show {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+/* Asymmetry Utilities */
+@media (min-width: 768px) {
+  .translate-y-6-organic { transform: translateY(1.5rem); }
+  .translate-y-12-organic { transform: translateY(3rem); }
+  .-translate-y-6-organic { transform: translateY(-1.5rem); }
+}
+
+/* Tibetan Prayer Flag Colors */
+.tibetan-flag {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.tibetan-flag span {
+  width: 8px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+.tibetan-flag .flag-blue { background: #2E5B8B; }
+.tibetan-flag .flag-white { background: #F5F5F5; }
+.tibetan-flag .flag-red { background: #C84C4C; }
+.tibetan-flag .flag-yellow { background: #D4A03D; }
+.tibetan-flag .flag-green { background: #3D8B5F; }
+
+/* Section dividers - Tibetan inspired */
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #2E5B8B 0%, #F5F5F5 20%, 
+    #C84C4C 40%, #D4A03D 60%, 
+    #3D8B5F 80%, #2E5B8B 100%
+  );
+  border-radius: 2px;
+  margin: 2rem 0;
+}
+
+/* Decorative corner - Tibetan pattern */
+.corner-decor {
+  position: relative;
+}
+
+.corner-decor::before {
+  content: '❄';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 1.5rem;
+  color: #8B2635;
+  opacity: 0.3;
+}
+
+.corner-decor::after {
+  content: '❄';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+  color: #8B2635;
+  opacity: 0.3;
+}
+
+/* Itinerary tabs */
+.itinerary-tab {
+  transition: all 0.3s var(--ease-spring);
+}
+
+.itinerary-tab:hover {
+  transform: translateY(-2px);
+}
+
+.itinerary-tab.active {
+  background: linear-gradient(135deg, #8B2635 0%, #A8333D 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(139, 38, 53, 0.25);
+  transform: scale(1.05);
+}
