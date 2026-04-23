@@ -80,11 +80,7 @@ Google Fonts – Inter font family
 
 📞 Contact Integration
 
-WhatsApp Numbers
-
-Primary: +91 8492008932
-
-Secondary: +91 9797796784
+WhatsApp Number: +91 9797796784
 
 Booking Process
 
